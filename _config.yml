@@ -21,8 +21,8 @@ sass:
   style: compressed
 
 # Site Data
-url: https://juhyung0818.github.io
-baseurl: /blog
+url: # https://juhyung0818.github.io
+baseurl: # /blog
 title: Juhyung's 나불나불
 description: "나의 블로그"
 keywords: 'juhyung, spring, java, server, backend'
