@@ -27,7 +27,7 @@ baseurl: # the subpath of your site, e.g. /blog
 title: Juhyung's 나불나불
 description: "나의 블로그"
 keywords: 'jekyll,theme,gem-based,blog'
-author:yun ju hyung
+author:
   name:yun ju hyung
   job_title:wanna be backend developer
   location:Incheon, Korea
