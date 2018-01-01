@@ -21,8 +21,8 @@ sass:
   style: compressed
 
 # Site Data
-url: # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: # the subpath of your site, e.g. /blog
+url: https://juhyung0818.github.io
+baseurl: /blog
 title: Juhyung's 나불나불
 description: "나의 블로그"
 keywords: 'juhyung, spring, java, server, backend'
