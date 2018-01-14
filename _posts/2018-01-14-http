@@ -1,3 +1,12 @@
+---
+layout: post
+title: "http"
+description: "web"
+categories: [web]
+tags: [random, web, http]
+redirect_from:
+  - /2018/01/14/
+---
 # HTTP
 > HTTP는 1996년 처음 1.0버전이 release되고 1999년 현재 우리가 공식적으로 가장 많이 사용하고 지원하는 버전인 1.1이 출시된 이후 15년동안 발전없이 사용되고 있다.
 > 현재의 웹은 다량의 멀티미디어 리소스를 처리 해야하고 웹페이지 하나를 구성하기 위해 다수의 비동기 요청이 발생되고 있고 이를 처리하기엔 HTTP1.1 스펙은 너무 느리고 비효율적이다.
