@@ -11,8 +11,8 @@ redirect_from:
 > 안녕하세요 블로그하고있는 윤주형이라고 합니다. 
 이름 : 윤주형(yun juhyung)  
 성별 : 남자  
-생년월일 : 1993.08.18  
-주소 : 인천, 대한민국
+생년월일 : 1993.08.18  
+주소 : 인천, 대한민국  
 email : juhyung0818@naver.com  
 깃허브 : github.com/juhyung0818  
 블로그 : juhyung0818.github.io
