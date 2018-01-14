@@ -1,0 +1,69 @@
+# HTTP
+> HTTP는 1996년 처음 1.0버전이 release되고 1999년 현재 우리가 공식적으로 가장 많이 사용하고 지원하는 버전인 1.1이 출시된 이후 15년동안 발전없이 사용되고 있다.
+> 현재의 웹은 다량의 멀티미디어 리소스를 처리 해야하고 웹페이지 하나를 구성하기 위해 다수의 비동기 요청이 발생되고 있고 이를 처리하기엔 HTTP1.1 스펙은 너무 느리고 비효율적이다.
+
+### HTTP status
+* 1xx : 정보성
+* 2xx : 성공
+* 3xx : 리다이렉트
+* 4xx : 클라이언트 오류
+* 5xx : 서버 오류
+
+### HTTP method
+* OPTIONS : 요청 URI에서 사용할 수 있는 Method를 물어본다
+* GET : 요청 URI의 정보를 가져온다.
+* HEAD : GET 요청에서 body는 제외하고 헤더만 가져온다.
+* POST : 요청 URI의 리소스의 새로운 정보를 보낸다.
+* PUT : 요청 URI에 저장될 정보를 보낸다.
+* DELETE : 요청 URI의 리소스를 삭제한다.
+* TRACE : 보낸 메시지를 다시 돌려보낸다.
+* CONNECT : 프록시에 사용하기 위해 예약된 메서드이다.  
+[공식 스펙](https://tools.ietf.org/html/rfc2616#section-9.1)
+
+### 요청 해더 (request header)
+1. `GET / HTTP/1.1`  
+2. `Host: developer.mozilla.org`
+3. `Accept-Language: fr`
+line 1을 요청 라인이라고 하며 method / path / version정보를 나타낸다.
+
+### 응답 해더 (response header)
+1. `HTTP/1.1 200 OK`
+2. `...`
+3. `Content-Length: 29769`
+4. `Content-Type: text/html`
+line 1을 응답 라인이라고 하며 version정보 / status
+
+### http 1.1
+* HTTP/1.1는 기본적으로 Connection당 하나의 요청을 처리 하도록 설계 되어있다. 
+* 동시전송이 불가능하고 요청과 응답이 순차적으로 이루어 지게된다.
+
+### SPDY
+*  구글에서 HTTP를 고속화한 SPDY(스피디) 라 불리는 새로운 프로토콜을 구현
+* HTTP를 통한 전송을 재 정의하는 형태로 구현
+* HTTP/1.1에 비해 상당한 성능 향상과 효율성, HTTP/2 초안의 참고 규격
+
+
+### http 2.0
+*완전히 새로운 프로토콜을 만들었기 보단 성능향상에 초점을 맞춘 프로토콜
+* Multiplexed Streams
+	* 한 커넥션으로 동시에 여러개의 메세지를 주고 받을 있으며, 응답은 순서에 상관없이 stream으로 주고 받음 
+	* HTTP/1.1의 Connection Keep-Alive, Pipelining의 개선
+* Stream Prioritization
+	* 리소스간의 우선순위를 두어 응답
+* Server Push
+	* 기본적으로 서버는 요청하지 않은 리소스를 클라이언트에게 보낼 수 있음
+	* HTML에 여러개의 리소스(CSS, Image…)가 포함되어 있는경우 HTTP/1.1에서 클라이언트는 HTML문서를 해석하면서 필요한 리소스를 재 요청 
+	* HTTP/2에선 요청하지도 않은 HTML문서에 포함된 리소스를 전송하는 방식으로 클라이언트의 요청을 최소화
+* Header Compression
+	*  Header 정보를 압축하는것
+	*  Header Table과 Huffman Encoding 기법을 사용하여 처리(HPACK 압축방식)
+
+### https
+* HTTP는 해커의 공격 및 스니핑에 매우 취약한 프로토콜
+* HTTPS(HTTP + Secure)는 HTTP 프로토콜에 SSL/TLS 레이어를 입힌 형태로 구현
+* https를 쓴다고 성능적인 저하는 없다!
+
+### QUIC
+* QUIC라는것도 있는데 추가적으로 찾아주세요!
+* QUIC는 http의 대안이 아니라 *TCP*의 대안 프로토콜
+* Google은 HTTP2-over-QUIC를 미래의 새로운 인터넷 표준으로 IETF에 제안 할 계획
